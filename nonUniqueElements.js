@@ -24,12 +24,26 @@ nonUniqueElements([5, 5, 5, 5, 5]) == [5, 5, 5, 5, 5]
 nonUniqueElements([10, 9, 10, 10, 9, 8]) == [10, 9, 10, 10, 9]
  */
 
+function filterArray(array, comparator) {
+  const result = [];
+  for (const item of array) {
+    if (comparator(item)) {
+      result.push(item);
+    }
+  }
+  return result;
+}
+
 export default function nonUniqueElements(data) {
+  if (!Array.isArray(data) || data.length === 0 || data.some(item => typeof item !== 'number' || !Number.isFinite(item))) {
+    return false;
+  }
+
   const frequency = {};
 
   for (const num of data) {
       frequency[num] = (frequency[num] || 0) + 1;
   }
 
-  return data.filter(num => frequency[num] > 1);
+  return filterArray(data, num => frequency[num] > 1);
 }

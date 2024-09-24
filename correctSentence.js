@@ -18,6 +18,10 @@ correctSentence("Greetings, friends.") == "Greetings, friends."
  */
 
 export default function correctSentence(text) {
-  const result = text[0].toUpperCase() + text.slice(1) + (text[text.length - 1] !== '.' ? '.' : '');
-  return result;
+  if (typeof text !== 'string' || text.trim().length === 0) {
+    return false;
+  }
+
+  const singleSpaceText = text.replace(/_/g, ' ').replace(/\s+/g, ' ').trim().toLowerCase();
+  return singleSpaceText[0].toUpperCase() + singleSpaceText.slice(1) + (singleSpaceText[singleSpaceText.length - 1] !== '.' ? '.' : '');
 }

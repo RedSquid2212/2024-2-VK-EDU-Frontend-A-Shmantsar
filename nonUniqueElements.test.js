@@ -7,3 +7,10 @@ test('returns non unique elements', () => {
   expect(nonUniqueElements([5, 5, 5, 5, 5])).toEqual([5, 5, 5, 5, 5]);
   expect(nonUniqueElements([10, 9, 10, 10, 9, 8])).toEqual([10, 9, 10, 10, 9]);
 })
+
+test('returns "false" when input data is not array of numbers', () => {
+  expect(nonUniqueElements(null)).toEqual(false);
+  expect(nonUniqueElements(['one', 'two', 'three'])).toEqual(false);
+  expect(nonUniqueElements([NaN, 1, 2, 4])).toEqual(false);
+  expect(nonUniqueElements([])).toEqual(false);
+})

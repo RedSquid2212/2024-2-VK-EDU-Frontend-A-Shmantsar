@@ -18,19 +18,16 @@
  */
 
 export default function convertBytesToHuman(bytes) {
-  if (typeof bytes !== 'number' || bytes < 0) {
+  if (typeof bytes !== 'number' || bytes < 0 || !Number.isFinite(bytes)) {
     return false;
   }
 
-  const units = ['B', 'KB', 'MB', 'GB'];
+  const units = ['B', 'KB', 'MB', 'GB', 'TB', 'PB'];
   let index = 0;
-  
-  while (bytes >= 1024 && index < units.length - 1) {
-      bytes /= 1024;
-      index++;
-  }
 
-  const formattedBytes = parseFloat(bytes.toFixed(2)).toString();
+  for (; bytes >= 1024 && index < units.length - 1; index++) {
+    bytes /= 1024
+  }
   
-  return `${formattedBytes} ${units[index]}`;
+  return `${parseFloat(bytes.toFixed(2))} ${units[index]}`;
 }
