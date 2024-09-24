@@ -35,14 +35,17 @@ function filterArray(array, comparator) {
 }
 
 export default function nonUniqueElements(data) {
-  if (!Array.isArray(data) || data.length === 0 || data.some(item => typeof item !== 'number' || !Number.isFinite(item))) {
+  if (!Array.isArray(data) || data.length === 0) {
     return false;
   }
 
   const frequency = {};
 
-  for (const num of data) {
-      frequency[num] = (frequency[num] || 0) + 1;
+  for (const item of data) {
+    if (typeof item !== 'number' || !Number.isFinite(item)) {
+      return false;
+    }
+    frequency[item] = (frequency[item] || 0) + 1;
   }
 
   return filterArray(data, num => frequency[num] > 1);
