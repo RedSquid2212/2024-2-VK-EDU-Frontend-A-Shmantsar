@@ -1,6 +1,7 @@
 @import url('./message-form.css');
 @import url('./chat-header.css');
 @import url('./messages.css');
+@import url('./main-page.css');
 
 html {
     box-sizing: border-box;
