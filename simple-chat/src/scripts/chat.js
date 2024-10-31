@@ -1,8 +1,9 @@
-import './index.css';
+import '../styles/index.css';
 
 const form = document.querySelector('form');
 const input = document.querySelector('.message-input');
 const messageList = document.querySelector('.message-list');
+const backButton = document.querySelector('.back-button');
 
 const oldMessages = JSON.parse(localStorage.getItem('messages')) ?? [];
 
@@ -12,6 +13,10 @@ window.addEventListener('load', () => {
 window.addEventListener('unload', () => saveInLocalStorage());
 form.addEventListener('submit', handleSubmit);
 form.addEventListener('keypress', handleKeyPress);
+
+backButton.addEventListener('click', () => {
+    window.location.href = 'http://localhost:8080/';
+});
 
 function handleSubmit(event) {
     event.preventDefault();
