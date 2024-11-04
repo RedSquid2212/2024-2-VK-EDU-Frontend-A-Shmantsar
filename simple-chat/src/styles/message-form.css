@@ -29,4 +29,9 @@
     color: rgb(173 173 173);
     cursor: pointer;
     font-size: 24px;
+    transition: color 0.6s;
+}
+
+.attach-button:hover {
+    color: rgb(0 0 0 / 0.7);
 }
