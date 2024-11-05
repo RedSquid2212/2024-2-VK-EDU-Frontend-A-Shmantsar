@@ -93,7 +93,7 @@
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-eval("var chatButton = document.querySelector('.main-page__chat');\nchatButton.addEventListener('click', function () {\n  window.location.href = 'http://localhost:8080/chat.html';\n});\n\n//# sourceURL=webpack:///./scripts/chat-list.js?");
+eval("var chatButton = document.querySelector('.main-page__chat');\nchatButton.addEventListener('click', function () {\n  window.location.pathname = '/chat.html';\n});\n\n//# sourceURL=webpack:///./scripts/chat-list.js?");
 
 /***/ }),
 
