@@ -15,7 +15,8 @@ form.addEventListener('submit', handleSubmit);
 form.addEventListener('keypress', handleKeyPress);
 
 backButton.addEventListener('click', () => {
-    window.location.href = 'http://localhost:8080/';
+    const rootPathName = window.location.pathname.replace('chat.html', '');
+    window.location.href = rootPathName;
 });
 
 function handleSubmit(event) {
