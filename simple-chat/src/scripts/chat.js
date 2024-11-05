@@ -8,14 +8,15 @@ const backButton = document.querySelector('.back-button');
 const oldMessages = JSON.parse(localStorage.getItem('messages')) ?? [];
 
 window.addEventListener('load', () => {
-    oldMessages.forEach(displayMessage);
+    oldMessages.forEach((message) => displayMessage(message, false));
 });
 window.addEventListener('unload', () => saveInLocalStorage());
 form.addEventListener('submit', handleSubmit);
 form.addEventListener('keypress', handleKeyPress);
 
 backButton.addEventListener('click', () => {
-    window.location.href = 'http://localhost:8080/';
+    const rootPathName = window.location.pathname.replace('chat.html', '');
+    window.location.href = rootPathName;
 });
 
 function handleSubmit(event) {
@@ -29,7 +30,7 @@ function handleSubmit(event) {
         };
 
         oldMessages.push(message);
-        displayMessage(message);
+        displayMessage(message, true);
         input.value = '';
     }
 }
@@ -40,9 +41,14 @@ function handleKeyPress(event) {
     }
 }
 
-function displayMessage(message) {
+function displayMessage(message, isNew) {
     const messageElement = document.createElement('div');
     messageElement.classList.add('message');
+    if (isNew) {
+        messageElement.classList.add('new-message');
+    } else {
+        messageElement.classList.remove('new-message');
+    }
     messageElement.innerText = `${message.text}`;
     messageElement.insertAdjacentHTML('beforeend', `<span class="message-time">${message.from} at ${message.time}</span>`);
     messageList.appendChild(messageElement);

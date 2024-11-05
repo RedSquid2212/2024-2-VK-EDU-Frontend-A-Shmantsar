@@ -1,5 +1,6 @@
 {
   "private": true,
+  "homepage": "https://redsquid2212.github.io/2024-2-VK-EDU-Frontend-A-Shmantsar/",
   "scripts": {
     "start": "webpack-dev-server --mode=development --hot",
     "build": "webpack --mode=development"

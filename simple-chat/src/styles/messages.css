@@ -19,6 +19,22 @@
     word-break: break-word;
 }
 
+.new-message {
+    position: relative;
+    bottom: -100px;
+    animation: slideIn 0.5s forwards;
+}
+
+@keyframes slideIn {
+    from {
+        bottom: -100px;
+    }
+
+    to {
+        bottom: 0;
+    }
+}
+
 .message-time {
     font-size: 12px;
     color: rgb(156 156 156);
