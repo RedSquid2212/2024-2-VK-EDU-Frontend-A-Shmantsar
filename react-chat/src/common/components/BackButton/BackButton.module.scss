@@ -1,0 +1,15 @@
+.back-button {
+    display: flex;
+    justify-content: center;
+    padding: 4px;
+    cursor: pointer;
+    background: none;
+    border: none;
+    color: rgb(255 255 255);
+    transition: background-color 0.6s;
+    border-radius: 50%;
+}
+
+.back-button:hover {
+    background-color: rgb(0 0 0 / 0.2);
+}

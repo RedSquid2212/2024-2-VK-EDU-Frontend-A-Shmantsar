@@ -1,0 +1,9 @@
+.message-list {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    padding: 64px 12px 12px 12px;
+    flex-grow: 1;
+    justify-content: flex-end;
+    height: calc(100% - 128px);
+}
