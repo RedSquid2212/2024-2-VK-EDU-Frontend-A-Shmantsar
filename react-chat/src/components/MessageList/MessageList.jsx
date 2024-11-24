@@ -1,12 +1,19 @@
 import Message from '../Message/Message';
 import styles from './MessageList.module.scss';
 
-export default function MessageList() {
+export default function MessageList({ messages }) {
     return (
         <>
             <div className={styles['message-list']}>
-                <Message text={'Я тут кое-что нарисовала. Посмотри, как будет время'} time={'10:53'} key={1}/>
-                <Message text={'Тебе нравится, как я нарисовала?'} time={'10:53'} key={2}/>
+                {messages.map(message => (
+                    <Message
+                        text={message.text}
+                        time={message.time}
+                        isNew={message.isNew}
+                        isReceived={message.isReceived}
+                        key={`${message.text}_${new Date()}`}
+                    />
+                ))}
             </div>
         </>
     );
