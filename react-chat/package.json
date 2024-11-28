@@ -3,6 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "homepage": "https://redsquid2212.github.io/2024-2-VK-EDU-Frontend-A-Shmantsar/",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
