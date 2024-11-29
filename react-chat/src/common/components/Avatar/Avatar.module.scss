@@ -1,0 +1,32 @@
+.contact-wrapper {
+    display: grid;
+    grid-template-areas:
+        "avatar name"
+        "avatar info";
+    cursor: pointer;
+    column-gap: 16px;
+    justify-content: center;
+    width: fit-content;
+}
+
+.chat-avatar {
+    grid-area: avatar;
+    border: 1px solid rgb(255 255 255);
+    border-radius: 50%;
+    background-color: rgb(255 255 255);
+}
+
+.chat-name {
+    grid-area: name;
+    font-size: 16px;
+    width: fit-content;
+    display: flex;
+    align-items: center;
+}
+
+.chat-info {
+    grid-area: info;
+    color: rgb(190 190 190);
+    width: fit-content;
+    font-size: 10px;
+}
