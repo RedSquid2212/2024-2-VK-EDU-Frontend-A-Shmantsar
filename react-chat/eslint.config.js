@@ -1,11 +1,13 @@
-import js from '@eslint/js'
-import globals from 'globals'
-import react from 'eslint-plugin-react'
-import reactHooks from 'eslint-plugin-react-hooks'
-import reactRefresh from 'eslint-plugin-react-refresh'
+import js from '@eslint/js';
+import globals from 'globals';
+import react from 'eslint-plugin-react';
+import reactHooks from 'eslint-plugin-react-hooks';
+import reactRefresh from 'eslint-plugin-react-refresh';
+import neostandard from 'neostandard';
 
 export default [
   { ignores: ['dist'] },
+  ...neostandard(),
   {
     files: ['**/*.{js,jsx}'],
     languageOptions: {
@@ -33,6 +35,9 @@ export default [
         'warn',
         { allowConstantExport: true },
       ],
+      'react/prop-types': 'off',
+      '@stylistic/semi': ['error', 'always'],
+      '@stylistic/comma-dangle': ['error', 'always-multiline'],
     },
   },
-]
+];
