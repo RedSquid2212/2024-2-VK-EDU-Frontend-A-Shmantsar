@@ -3,11 +3,13 @@ import globals from 'globals';
 import react from 'eslint-plugin-react';
 import reactHooks from 'eslint-plugin-react-hooks';
 import reactRefresh from 'eslint-plugin-react-refresh';
-import neostandard from 'neostandard';
+import { FlatCompat } from '@eslint/eslintrc';
+
+const compat = new FlatCompat();
 
 export default [
   { ignores: ['dist'] },
-  ...neostandard(),
+  ...compat.extends('eslint-config-standard'),
   {
     files: ['**/*.{js,jsx}'],
     languageOptions: {
@@ -36,8 +38,8 @@ export default [
         { allowConstantExport: true },
       ],
       'react/prop-types': 'off',
-      '@stylistic/semi': ['error', 'always'],
-      '@stylistic/comma-dangle': ['error', 'always-multiline'],
+      semi: ['error', 'always'],
+      'comma-dangle': ['error', 'always-multiline'],
     },
   },
 ];
