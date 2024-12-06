@@ -1,11 +1,15 @@
-import js from '@eslint/js'
-import globals from 'globals'
-import react from 'eslint-plugin-react'
-import reactHooks from 'eslint-plugin-react-hooks'
-import reactRefresh from 'eslint-plugin-react-refresh'
+import js from '@eslint/js';
+import globals from 'globals';
+import react from 'eslint-plugin-react';
+import reactHooks from 'eslint-plugin-react-hooks';
+import reactRefresh from 'eslint-plugin-react-refresh';
+import { FlatCompat } from '@eslint/eslintrc';
+
+const compat = new FlatCompat();
 
 export default [
   { ignores: ['dist'] },
+  ...compat.extends('eslint-config-standard'),
   {
     files: ['**/*.{js,jsx}'],
     languageOptions: {
@@ -33,6 +37,9 @@ export default [
         'warn',
         { allowConstantExport: true },
       ],
+      'react/prop-types': 'off',
+      semi: ['error', 'always'],
+      'comma-dangle': ['error', 'always-multiline'],
     },
   },
-]
+];
