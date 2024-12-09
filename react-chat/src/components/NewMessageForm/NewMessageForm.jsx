@@ -3,7 +3,7 @@ import styles from './NewMessageForm.module.scss';
 import AttachmentIcon from '@mui/icons-material/Attachment';
 import { setItemToLocalStorage } from '../../utils/localStorage.service';
 
-export default function NewMessageForm ({ setMessages }) {
+export default function NewMessageForm({ setMessages }) {
   const [inputValue, setInputValue] = useState('');
   const inputElement = useRef(null);
   const onSubmit = (event) => {

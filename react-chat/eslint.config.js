@@ -40,6 +40,7 @@ export default [
       'react/prop-types': 'off',
       semi: ['error', 'always'],
       'comma-dangle': ['error', 'always-multiline'],
+      'space-before-function-paren': ['error', 'never'],
     },
   },
 ];

@@ -2,7 +2,7 @@ import Chat from '../Chat/Chat';
 import NewChatButton from '../NewChatButton/NewChatButton';
 import styles from './ChatsList.module.scss';
 
-export default function ChatsList ({ setRoute, setChatInfo }) {
+export default function ChatsList() {
   const chatsInfo = [
     { chatName: 'Дженнифер Эшли', lastMessage: 'Ты куда пропал?', lastMessageTime: '15:52', isChecked: false },
     { chatName: 'Общество целых бокалов', lastMessage: 'Ребят, без меня сегодня :(', lastMessageTime: '15:52', isChecked: true },
@@ -23,8 +23,6 @@ export default function ChatsList ({ setRoute, setChatInfo }) {
                     lastMessage={chatInfo.lastMessage}
                     lastMessageTime={chatInfo.lastMessageTime}
                     isChecked={chatInfo.isChecked}
-                    setRoute={setRoute}
-                    setChatInfo={setChatInfo}
                   />)
             }
       <NewChatButton />

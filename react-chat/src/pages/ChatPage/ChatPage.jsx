@@ -4,7 +4,7 @@ import MessageList from '../../components/MessageList/MessageList';
 import NewMessageForm from '../../components/NewMessageForm/NewMessageForm';
 import { getItemFromLocalStorage } from '../../utils/localStorage.service';
 
-export default function ChatPage ({ chatName, info, setRoute }) {
+export default function ChatPage({ chatName, info }) {
   const initialMessages = JSON.parse(getItemFromLocalStorage('messages')) ?? [
     { text: 'Я тут кое-что нарисовала. Посмотри, как будет время', time: '10:53', isNew: false, isReceived: true },
     { text: 'Тебе нравится, как я нарисовала?', time: '10:53', isNew: false, isReceived: true },
@@ -20,7 +20,7 @@ export default function ChatPage ({ chatName, info, setRoute }) {
 
   return (
     <>
-      <ChatHeader setRoute={setRoute} chatName={chatName} info={info} />
+      <ChatHeader chatName={chatName} info={info} />
       <MessageList messages={messages} />
       <NewMessageForm setMessages={setMessages} />
     </>

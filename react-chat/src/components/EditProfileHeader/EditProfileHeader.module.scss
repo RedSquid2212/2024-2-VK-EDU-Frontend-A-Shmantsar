@@ -1,0 +1,15 @@
+.header {
+    height: 64px;
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    padding: 12px;
+    background-color: rgb(142 36 170);
+    color: rgb(255 255 255);
+    font-size: 20px;
+    box-sizing: border-box;
+}
+
+.title {
+    flex-grow: 1;
+}
