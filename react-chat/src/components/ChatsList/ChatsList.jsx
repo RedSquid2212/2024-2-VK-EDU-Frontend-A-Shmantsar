@@ -16,15 +16,16 @@ export default function ChatsList() {
   return (
     <main className={styles['main-page__chats-list']}>
       {
-                chatsInfo.map(chatInfo =>
-                  <Chat
-                    key={chatInfo.chatName}
-                    chatName={chatInfo.chatName}
-                    lastMessage={chatInfo.lastMessage}
-                    lastMessageTime={chatInfo.lastMessageTime}
-                    isChecked={chatInfo.isChecked}
-                  />)
-            }
+        chatsInfo.map((chatInfo, index) =>
+          <Chat
+            key={chatInfo.chatName}
+            chatName={chatInfo.chatName}
+            lastMessage={chatInfo.lastMessage}
+            lastMessageTime={chatInfo.lastMessageTime}
+            isChecked={chatInfo.isChecked}
+            id={index}
+          />)
+      }
       <NewChatButton />
     </main>
   );

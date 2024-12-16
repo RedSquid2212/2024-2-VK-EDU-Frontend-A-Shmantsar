@@ -4,9 +4,9 @@ import DoneAllIcon from '@mui/icons-material/DoneAll';
 import styles from './Chat.module.scss';
 import { useNavigate } from 'react-router-dom';
 
-export default function Chat({ chatName, lastMessage, lastMessageTime, isChecked }) {
+export default function Chat({ chatName, lastMessage, lastMessageTime, isChecked, id }) {
   const navigate = useNavigate();
-  const onChatClick = () => navigate('/chat/:id');
+  const onChatClick = () => navigate(`/chat/${id}`);
 
   return (
     <div

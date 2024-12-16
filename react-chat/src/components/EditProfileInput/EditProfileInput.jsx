@@ -1,6 +1,6 @@
 import styles from './EditProfileInput.module.scss';
 
-export default function EditProfileInput({ label, isTextArea, id, info, minLength }) {
+export default function EditProfileInput({ label, isTextArea, id, info, minLength, value }) {
   return (
     <div className={styles['floating-label']}>
       {
@@ -12,6 +12,7 @@ export default function EditProfileInput({ label, isTextArea, id, info, minLengt
                 className={styles.textarea}
                 autoComplete='off'
                 placeholder={label}
+                defaultValue={value}
               />
             </>
             )
@@ -24,6 +25,7 @@ export default function EditProfileInput({ label, isTextArea, id, info, minLengt
                 autoComplete='off'
                 placeholder={label}
                 minLength={minLength}
+                defaultValue={value}
               />
             </>
             )
