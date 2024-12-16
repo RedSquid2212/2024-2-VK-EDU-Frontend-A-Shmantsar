@@ -12,7 +12,7 @@ export default function EditProfileHeader() {
             <div className={styles.title}>
                 Edit Profile
             </div>
-            <SaveButton />
+            <SaveButton onClick={onBackButtonClick} />
         </header>
   );
 }
