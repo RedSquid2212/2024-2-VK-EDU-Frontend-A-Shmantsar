@@ -1,0 +1,16 @@
+.upload {
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+}
+
+.upload-button {
+    background-color: rgb(120 120 120);
+    border-radius: 50%;
+    width: fit-content;
+    display: flex;
+    padding: 20px;
+    cursor: pointer;
+    color: rgb(255 255 255);
+    font-size: 50px;
+}

@@ -2,7 +2,7 @@ import { createAvatar } from '@dicebear/core';
 import { adventurer } from '@dicebear/collection';
 import styles from './Avatar.module.scss';
 
-export default function Avatar ({ chatName, info }) {
+export default function Avatar({ chatName, info }) {
   const avatar = createAvatar(adventurer, {
     size: 40,
     seed: chatName,
