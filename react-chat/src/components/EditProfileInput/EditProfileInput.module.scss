@@ -13,7 +13,7 @@
     border-top-right-radius: 4px;
     padding: 12px 20px;
     box-sizing: border-box;
-    font-family: sans-serif;
+    font-family: manrope;
 }
 
 .input:focus, .textarea:focus {
@@ -23,7 +23,7 @@
 }
 
 .input::placeholder, .textarea::placeholder {
-    font-family: sans-serif;
+    font-family: manrope;
     font-size: 14px;
 }
 

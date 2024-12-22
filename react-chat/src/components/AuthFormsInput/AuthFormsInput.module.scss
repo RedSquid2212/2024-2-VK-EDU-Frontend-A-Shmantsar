@@ -1,0 +1,28 @@
+.label {
+    display: flex;
+    gap: 12px;
+    width: 100%;
+}
+
+.label-text {
+    flex-grow: 1;
+}
+
+.auth-input {
+    width: 300px;
+    height: 32px;
+    border-radius: 4px;
+    border: 1px solid rgb(255 213 79);
+    background-color: transparent;
+    caret-color: rgb(255 213 79);
+}
+
+.textarea {
+    resize: none;
+    height: 60px;
+}
+
+.auth-input:focus {
+    border: 2px solid rgb(255 213 79);
+    outline: 0;
+}

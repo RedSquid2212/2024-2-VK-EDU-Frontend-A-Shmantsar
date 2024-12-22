@@ -3,10 +3,10 @@ import styles from './EditProfileAvatarUpload.module.scss';
 
 export default function EditProfileAvatarUpload() {
   return (
-        <div className="upload-wrapper">
+        <div>
             <input id="upload" className={styles.upload} type='file' />
             <label htmlFor="upload" className={styles['upload-button']}>
-                <PhotoCameraIcon className='upload-icon' fontSize='inherit' />
+                <PhotoCameraIcon fontSize='inherit' />
             </label>
         </div>
   );
