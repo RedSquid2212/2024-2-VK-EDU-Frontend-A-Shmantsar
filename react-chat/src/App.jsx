@@ -4,6 +4,7 @@ import ChatPage from './pages/ChatPage/ChatPage';
 import { HashRouter, Route, Routes } from 'react-router-dom';
 import EditProfilePage from './pages/EditProfilePage/EditProfilePage';
 import RegisterPage from './pages/RegisterPage/RegisterPage';
+import LoginPage from './pages/LoginPage/LoginPage';
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
       <Routes>
         <Route path='/' element={<AllChatsPage />} />
         <Route path='/register' element={<RegisterPage />} />
+        <Route path='/login' element={<LoginPage />} />
         <Route path='/chat/:id' element={<ChatPage />} />
         <Route path='/profile/edit' element={<EditProfilePage />} />
       </Routes>
