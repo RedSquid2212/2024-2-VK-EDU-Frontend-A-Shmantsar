@@ -37,7 +37,7 @@ export default function InputField({ setTranslatedText, fromLanguage, toLanguage
 
     const translateText = async (textToTranslate: string) => {
         try {
-            const response = await TranslateUtils.translate({ text: textToTranslate });
+            const response = await TranslateUtils.translate({ text: textToTranslate, fromLanguage, toLanguage });
             if (!response) {
                 return;
             }
