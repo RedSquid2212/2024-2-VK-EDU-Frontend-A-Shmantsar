@@ -10,7 +10,7 @@ export default function MainPageContent() {
     return (
         <main className={styles['main-content']}>
             <CardsHeader />
-            <InputField setTranslatedText={setTranslatedText} />
+            <InputField setTranslatedText={setTranslatedText} fromLanguage='en' toLanguage='ru' />
             <TranslationCard text={translatedText} />
         </main>
     );
