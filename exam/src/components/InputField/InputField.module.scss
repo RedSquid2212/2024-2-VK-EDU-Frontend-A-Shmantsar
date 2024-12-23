@@ -1,0 +1,10 @@
+.input-field {
+    grid-area: input;
+    resize: none;
+    border-bottom-left-radius: 8px;
+    border: none;
+    height: 300px;
+    font-size: 16px;
+    caret-color: rgb(0 0 0 / 0.6);
+    border-right: 1px solid rgb(0 0 0 / 0.3);
+}

@@ -1,0 +1,16 @@
+.card {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.lang-pair {
+    display: flex;
+    gap: 4px;
+    align-items: center;
+    padding-bottom: 12px;
+}
+
+.translated {
+    color: rgb(0 0 0 / 0.7);
+}

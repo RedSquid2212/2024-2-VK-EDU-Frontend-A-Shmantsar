@@ -1,0 +1,23 @@
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    align-items: center;
+    justify-content: center;
+    color: rgb(26 103 210);
+    font-weight: 600;
+}
+
+.history-button {
+    border-radius: 50%;
+    background-color: rgb(229 236 250);
+    color: rgb(26 103 210);
+    width: 70px;
+    height: 70px;
+    font-size: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border: none;
+}
