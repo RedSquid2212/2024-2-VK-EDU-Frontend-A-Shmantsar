@@ -1,9 +1,13 @@
 import styles from './TranslationCard.module.scss';
 
-export default function TranslationCard() {
+type TranslationCardArgs = {
+    text: string;
+};
+
+export default function TranslationCard({ text }: TranslationCardArgs) {
     return (
         <div className={styles.translation}>
-            Translation
+            { text.length > 0 ? text : 'Translation' }
         </div>
     );
 }
