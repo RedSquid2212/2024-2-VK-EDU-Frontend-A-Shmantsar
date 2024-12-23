@@ -3,10 +3,15 @@ import { buildApiUrl, buildCacheKey, getErrorText, isCached } from './utils';
 
 const cache = new Map<string, string>();
 
-export async function translate({text, fromLanguage = 'en', toLanguage = 'ru'}: TranslateArgs) {
+export async function translate({text, fromLanguage = 'en', toLanguage = 'ru', isAutodetect = false}: TranslateArgs) {
     if (!text) {
         return;
     }
+
+    if (isAutodetect) {
+        fromLanguage = 'Autodetect';
+    }
+
     const errorText = getErrorText(fromLanguage, toLanguage);
     if (errorText.length > 0) {
         throw Error(errorText);
