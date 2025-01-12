@@ -1,0 +1,14 @@
+.wrapper {
+    display: flex;
+    justify-content: flex-end;
+    padding: 12px;
+}
+
+.history-button {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    color: rgb(26 103 210);
+    font-size: 18px;
+    font-weight: 600;
+}
